@@ -1,11 +1,10 @@
-import Header from '../components/Header'
+import Layout from '../components/Layout'
 
 function About() {
 	return (
-		<div>
-			<Header />
+		<Layout>
 			<p>This is the about Page</p>
-		</div>
+		</Layout>
 	)
 }
 
