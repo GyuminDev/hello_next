@@ -1,23 +1,24 @@
 import Layout from '../components/Layout'
 import Link from 'next/link'
+import React from "react";
 
 function Index() {
 	return (
 		<Layout>
 			<h1>My Blog</h1>
 			<ul>
-				<PostLink title="Hello Next.js"/>
-				<PostLink title="Learn Next.js is awesome"/>
-				<PostLink title="Deploy apps with Zeit"/>
+				<PostLink id="hello-nextjs" title="Hello Next.js"/>
+				<PostLink id="learn-nextjs" title="Learn Next.js is awesome"/>
+				<PostLink id="deploy-nextjs" title="Deploy apps with Zeit"/>
 			</ul>
 		</Layout>
 	)
 }
 
-function PostLink({title}) {
+function PostLink({id, title}) {
 	return (
 		<li>
-			<Link href={`/post?title=${title}`}>
+			<Link as={`/post/${id}`} href={`/post?title=${title}`}>
 				<a>{title}</a>
 			</Link>
 		</li>
